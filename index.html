@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Acceso a p&aacute;gina web</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <h1>Formulario de registro</h1>
+        <form id="formulario" method="POST" action="registro.php">
+            <label for="nombre">Nombre <span><em>(requerido)</em></span></label>
+            <input id="nombre" type="text" name="nombre" maxlength="20" required />
+            <span id="errorNombre" style="display: none;"></span>
+
+            <label for="primerApellido">Primer apellido <span><em>(requerido)</em></span></label>
+            <input id="primerApellido" type="text" name="primerApellido" maxlength="20" required />
+            <span id="errorPrimerApellido" style="display: none;"></span>
+
+            <label for="segundoApellido">Segundo apellido <span><em>(requerido)</em></span></label>
+            <input id="segundoApellido" type="text" name="segundoApellido" maxlength="20" required />
+            <span id="errorSegundoApellido" style="display: none;"></span>
+
+            <label for="email">Email <span><em>(requerido)</em></span></label>
+            <input id="email" type="email" name="email" maxlength="30" required />
+            <span id="errorEmail" style="display: none;"></span>
+
+            <label for="login">Login <span><em>(requerido)</em></span></label>
+            <input id="login" type="text" name="login" pattern='[A-Za-z0-9]+' maxlength="20" required />
+            <span id="errorLogin" style="display: none;"></span>
+
+            <label for="password">Password <span><em>(requerido)</em></span></label>
+            <input id="password" type="password" name="password" minlength="4" maxlength="8" required />
+            <span id="errorPassword" style="display: none;"></span>
+
+            <input type="submit" name="submit" value="Registrarse" />
+        </form>
+    </div>
+    <script src="validacion.js" charset="utf-8"></script>
+</body>
+
+</html>
